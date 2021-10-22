@@ -13,13 +13,31 @@ document.getElementById('btn-download').addEventListener("click", () => {
     alert("Download");
 });
 
-document.getElementById('moon').addEventListener("click", () => {
+document.getElementById('icon-moon').addEventListener("click", () => {
     moon = !moon;
-    alert(`Moon ${moon}`);
+    document.querySelectorAll('svg[data-src]').forEach( svg => {  
+        svg.setAttribute("class", moon ? 'active' : '');
+    });
+    document.querySelectorAll('a').forEach( element => {
+        if (element.className === 'active'){
+            element.className = moon ? 'active active-mode' : 'active';
+        }
+    });
+    document.getElementById('body').className = moon ? 'mode' : '';
+    document.getElementById('btn-download').className = moon ? 'mode' : '';
+    document.getElementsByClassName('active')[0].className = moon ? 'active active-mode' : 'active';
 
 });
 
 document.getElementById('btn-take').addEventListener("click", () => {
     const email = document.getElementById("email").value;
     alert(`Send mail ${email}, Thank you`);
+});
+
+document.addEventListener('DOMContentLoaded', () => { 
+    document.querySelectorAll('svg[data-src]').forEach( svg => { 
+        fetch(svg.dataset.src)
+        .then(respuesta => respuesta.text())
+        .then(xml => svg.innerHTML = xml); 
+    });
 });

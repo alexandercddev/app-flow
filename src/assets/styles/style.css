@@ -43,7 +43,7 @@ header > nav > div.nav > div > ul > li {
 header > nav > div.nav > div > button {
   background: #9c2bf3;
 }
-header > nav > div.nav > div > div > #moon {
+header > nav > div.nav > div > div > .moon {
   cursor: pointer;
   width: 50px;
   height: 50px;
@@ -95,6 +95,14 @@ body {
   background: #9c2deb;
 }
 
+.mode {
+  background: #1d003d !important;
+}
+
+.active-mode {
+  color: #1d003d !important;
+}
+
 .section {
   display: flex;
   justify-content: center;
@@ -123,6 +131,61 @@ p {
 
 .take-form {
   margin-top: 30px;
+}
+
+.cube {
+  margin-right: 10px;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+}
+svg > svg > path {
+  fill: #9d2ae5;
+}
+svg.active > svg > path {
+  fill: #1d003d !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+  header > nav {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  header > nav > div.nav {
+    justify-content: space-between;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .container-app {
+    flex-direction: column;
+  }
+  .container-app > .col-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p, h1 {
+    text-align: center;
+  }
+
+  .take-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
