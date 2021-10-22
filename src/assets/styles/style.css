@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+}
+header > nav {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+header > nav > div.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header > nav > div.nav > div {
+  display: flex;
+  align-items: center;
+}
+header > nav > div.nav > div > div.name {
+  font-size: 25px;
+  font-weight: bold;
+  color: #35363b;
+}
+header > nav > div.nav > div > ul {
+  display: flex;
+  margin-right: 10px;
+}
+header > nav > div.nav > div > ul > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 5px;
+}
+header > nav > div.nav > div > button {
+  background: #9c2bf3;
+}
+header > nav > div.nav > div > div > #moon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+input[type=text] {
+  width: 230px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  border: none;
+}
+input[type=text]:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  color: #FFF;
+}
+button:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover, a.active {
+  color: #9c2deb;
+}
+
+#btn-take {
+  background: #48307e;
+}
+
+body {
+  background: #9c2deb;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 30px;
+  max-width: 890px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #FFF;
+}
+
+p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #FFF;
+}
+
+.take-form {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
